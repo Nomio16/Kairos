@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Kairos Cat Gatekeeper",
+  "version": "1.0",
+  "description": "Blocks doomscrolling and enforces Spaced Repetition flashcards.",
+  "permissions": ["storage"],
+  "host_permissions": ["*://*.youtube.com/*", "*://*.instagram.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.instagram.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
