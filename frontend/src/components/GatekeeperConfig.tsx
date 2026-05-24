@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const GatekeeperConfig: React.FC = () => {
     const [timeLimit, setTimeLimit] = useState(15);
-    const [sites, setSites] = useState(['youtube.com', 'instagram.com', 'tiktok.com']);
+    const [sites] = useState(['youtube.com', 'instagram.com', 'tiktok.com']);
     
     return (
         <div className="glass-panel" style={{ margin: '0 auto', marginTop: '50px', width: '100%', maxWidth: '500px' }}>
